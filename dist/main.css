@@ -1,0 +1,49 @@
+#posts {
+  margin-right: 0rem;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 2rem;
+  float: right;
+  letter-spacing: 2px;
+  line-height: 276%;
+  border: 2px solid grey;
+  width: 8rem;
+  background: #CDD3DA;
+  height: 33.3rem; }
+
+form {
+  margin-top: 4rem;
+  margin-left: 42rem; }
+
+input #postTitle {
+  height: 2rem;
+  width: 8.5rem; }
+
+h2 {
+  margin-left: 15rem;
+  top: 10rem;
+  transform: translateY(0px);
+  font-size: 4rem;
+  margin-bottom: 0rem;
+  font-family: arial;
+  color: grey; }
+
+#blogContainer {
+  margin-left: 18rem;
+  margin-top: 3rem; }
+
+.container {
+  margin-top: 3rem;
+  border: 2px solid grey;
+  height: 52rem;
+  width: 52rem;
+  margin: auto;
+  background: aliceblue; }
+
+p.title {
+  font-size: 3rem; }
+
+p.body {
+  font-size: 2rem; }
+
+/*# sourceMappingURL=main.css.map */
