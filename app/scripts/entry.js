@@ -14,3 +14,4 @@ import Backbone from 'backbone';
 import routerPage from './router';
 
 Backbone.history.start();
+routerPage.navigate('posts', {trigger:true})
