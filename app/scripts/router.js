@@ -13,7 +13,8 @@ const Router = Backbone.Router.extend({
         posts: 'postsFunction',
   information: 'informationFunction',
   'posts/:id':  'singlePostFunction',
-        login: 'loginFunction'
+        login: 'loginFunction',
+        '/*': 'postsFunction'
 
 
 
