@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import $posts from './formPage';
-import $information from './personForm';
+import $information from './information';
 import PostView from './postView';
 import SinglePost from './singlePostView';
 import loginView from './login';
-
+import Navigation from './nav';
 
 
 const Router = Backbone.Router.extend({
@@ -13,8 +13,9 @@ const Router = Backbone.Router.extend({
         posts: 'postsFunction',
   information: 'informationFunction',
   'posts/:id':  'singlePostFunction',
-        login: 'loginFunction',
-        '/*': 'postsFunction'
+
+        '/*': 'informationFunction'
+
 
 
 
@@ -23,12 +24,19 @@ const Router = Backbone.Router.extend({
       let postView = new PostView();
       postView.render();
 
+      let navigation = new Navigation();
+      navigation.render()
 
-        $('.container').empty().append($posts).append(postView.$el);
+
+        $('.container').empty().append($posts).append(postView.$el).append(navigation.$el);
 
     },
     informationFunction: function() {
-        $('.container').append($information);
+      let navigation = new Navigation();
+      navigation.render()
+        $('.container').empty().append($information).append(navigation.$el);
+
+
         console.log('hi');
     },
     singlePostFunction: function(id){
@@ -39,14 +47,16 @@ const Router = Backbone.Router.extend({
       $('.container').empty().append($posts).append(postView.$el).append($(`<div id="blogContainer">
         </div>`));
       //postView.$el.find('#blogContainer').append(singlePost.$el);
-      $('#blogContainer').empty().append(singlePost.$el);
+      $('#blogContainer').append(singlePost.$el);
     },
-    loginFunction: function(){
-    //  let loginView = new LoginView();
-    //  loginView.render();
-      $('.container').empty().append(loginView.$el);
 
-    }
+
+    // loginFunction: function(){
+    // //  let loginView = new LoginView();
+    // //  loginView.render();
+    //   $('.container').empty().append(loginView.$el);
+    //
+    // }
 });
 
 

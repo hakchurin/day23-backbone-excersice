@@ -2,9 +2,9 @@
   margin-right: 0rem;
   text-decoration: none;
   list-style-type: none;
-  font-size: 2rem;
+  font-size: 1rem;
   float:right;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 276%;
   border: 2px solid grey;
   width: 8rem;
@@ -25,9 +25,11 @@
 //   // text-align: center;
 // }
 
-form{
+#loginForm{
   margin-top: 4rem;
 margin-left: 42rem;
+margin-left: 20rem;
+width: 3%;
 }
 
 input #postTitle{
@@ -37,7 +39,7 @@ input #postTitle{
 }
 
 h2{
-  margin-left: 15rem;
+  margin-left: 18.5rem;
   top: 10rem;
   transform: translateY(0px);
   font-size: 4rem;
@@ -67,4 +69,21 @@ p.title {
 
 p.body{
   font-size: 2rem;
+}
+
+nav{
+  margin-top: -12rem;
+  margin-right: 0rem;
+// margin-top: -12rem;
+margin-left: 46rem;
+}
+
+
+form{
+  margin-left: 42rem;
+}
+
+p{
+  margin-bottom: -2rem;
+
 }

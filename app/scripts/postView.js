@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import router from './router';
-import $information from './personForm';
+import $information from './information';
 import $posts from './formPage';
 import postCollection from './postCollection';
 
@@ -20,8 +20,7 @@ const PostView = Backbone.View.extend({
     postCollection.fetch();
 
   },
-  // <div id="blogContainer">
-  // </div>
+
     template: function(){
       return `
         <ul id= "posts">

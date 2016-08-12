@@ -22,7 +22,8 @@ const SinglePost = Backbone.View.extend({
       },
       template: function(){
         return `
-        <p class= "title"> ${this.model.get('title')} </p>
+  
+        <p class= "title">  ${this.model.get('title')} </p>
         <p class= "body"> ${this.model.get('body')}</p>
         `;
       },

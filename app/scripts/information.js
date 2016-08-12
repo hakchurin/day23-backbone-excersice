@@ -8,17 +8,16 @@
  import Backbone from 'backbone';
  import router from './router';
  import Info from './person';
-
+import Navigation from './nav';
 
 
  function renderPeople() {
      let $information = $(`
      <div class="postContainer">
-       <h2>information</h2>
-       <form>
-         <input type="text" name="first-name" class="first-name" placeholder="First Name">
-         <input type="text" name="last-name" class="last-name" placeholder="Last Name">
-         <input type="text" name="address" class="address" placeholder="address">
+       <h2>Login</h2>
+       <form id="loginForm">
+         <input type="text" name="username" class="username" placeholder="Username">
+         <input type="password" name="password" class="password" placeholder="password">
          <input type="submit" class="submit" name="submit" value="submit">
        </form>
      </div>
@@ -26,12 +25,14 @@
 
      $information.find('input[type="submit"]').on('click', function(evt) {
          evt.preventDefault();
-         var info = new Info({
-             firstName: $('.first-name').val(),
-             lastName: $('.last-name').val(),
-             address: $('.address').val()
-           });
-         info.save();
+        //  var info = new Info({
+        //      firstName: $('.first-name').val(),
+        //      lastName: $('.last-name').val(),
+        //      password: $('.password').val()
+        //    });
+           router.navigate('posts', {trigger:true});
+
+        //  info.save();
      });
     //  $('.container').append($information);
      return $information;
